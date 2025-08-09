@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <style>
+    
+    
+      
+   
+
+    
+    .modal {
+      background-image:url("back.jpeg");
+      background-size:cover;
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+    }
+    .payment-option {
+      display: block;
+      background-color: #1976d2;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .payment-option:hover {
+      background-color: #125aa3;
+    }
+
+    
+    .close-btn {
+      background-color: #ccc;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .close-btn:hover {
+      background-color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<button class="donate-btn" onclick="openModal()">Donate</button>
+
+
+<div class="modal" id="paymentModal">
+  <div class="modal-content">
+    <h2>Select Payment Method</h2>
+    <a href="https://www.paypal.com/donate" class="payment-option">PayPal</a>
+    <a href="https://yourwebsite.com/credit-card-payment" class="payment-option">Credit Card</a>
+    <a href="https://yourwebsite.com/debit-card-payment" class="payment-option">Debit Card</a>
+    <button class="close-btn" onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("paymentModal").style.display = "flex";
+}
+function closeModal() {
+  document.getElementById("paymentModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
